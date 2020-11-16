@@ -9,7 +9,7 @@ from PIL import ImageFont
 from PIL import ImageDraw
 import SDL_DS3231
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
-import subprocess
+from os import system
 
 serial_port = '/dev/ttyS0'
 serial_speed = 9600
@@ -133,6 +133,12 @@ def updateImage():
     print_matrix(10, str(count["all 2"]+count["all 1"]), color2, myFont)
 
     matrix.SetImage(buffer, 0, 0)
+    
+    system("clear")
+    print(rtc_str)
+    print(str(temperature)+"°C")
+    print(str(count["today 1"]+count["today 2"]))
+    print(str(count["all 1"]+count["all 2"]))
 
 
 def readData():

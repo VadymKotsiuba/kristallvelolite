@@ -42,7 +42,7 @@ while work:
         print(ds3231.read_str())
     if choose == 2:
         setTime()
-    if choose == 4:
+    if choose == 3:
         resetCounter()
     if choose == 4:
         work = False
