@@ -4,7 +4,6 @@ import serial
 import time
 from PIL import *
 from PIL import Image
-from PIL import ImageTk
 from PIL import ImageFont
 from PIL import ImageDraw
 import SDL_DS3231

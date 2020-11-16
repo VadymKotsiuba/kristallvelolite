@@ -29,11 +29,15 @@ def setTime():
     print("The time has been set")
     
 def resetCounter():
-    dataFile = open("/home/pi/kristallvelolite/count.txt", "w")
-    dataFile.write(str(0) + " " + str(0) + "\n")
-    dataFile.write(str(0) + " " + str(0))
-    dataFile.close()
-    print("The counter file has been reset.")
+    accept = input("Do you want reset counter file?(y/n)")
+    if accept == "y":
+        dataFile = open("/home/pi/kristallvelolite/count.txt", "w")
+        dataFile.write(str(0) + " " + str(0) + "\n")
+        dataFile.write(str(0) + " " + str(0))
+        dataFile.close()
+        print("The counter file has been reset.")
+    else:
+        print("You canceled the decision.")
 
 while work:
     print("1-Print RTC data | 2 - Set RTC Data | 3 - Reset Counter File | 4 - Exit")
