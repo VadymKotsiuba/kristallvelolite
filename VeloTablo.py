@@ -163,14 +163,16 @@ def readData():
                 error[1] = 0
                 new_count += 1
             if dataSerial[0] == 1 or dataSerial[0] == 2:
-                dT = abs(temperature - dataSerial[1])
+                sign = 1 #13:54 16.11.2020 Vadym Kotsiuba
+                if dataSerial[0] == 2: #13:54 16.11.2020 Vadym Kotsiuba
+                    sign = -1
+                dT = abs(temperature - (dataSerial[1]*sign)) #13:54 16.11.2020 Vadym Kotsiuba
                 if dataSerial[1] != 0 and -20<dataSerial[1]<40 and isFirstTemp == True:
                     temperature = dataSerial[1]
                     isFirstTemp = False
                 if dT <= 3:
                     temperature = dataSerial[1]
-                if dataSerial[0] == 2:
-                    temperature *= (-1) #17:03 06.05.2020 Vlad
+                temperature *= sign #13:54 16.11.2020 Vadym Kotsiuba
 #    except:
 #    print('ComPort error')
 #     COMport.close()
