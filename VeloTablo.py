@@ -10,7 +10,7 @@ import SDL_DS3231
 from rgbmatrix import RGBMatrix, RGBMatrixOptions
 from os import system
 
-serial_port = '/dev/ttyS0'
+serial_port = '/dev/ttyAMA0'
 serial_speed = 9600
 
 font_name = "/home/pi/kristallvelolite/MyFont.ttf"
