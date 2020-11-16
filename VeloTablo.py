@@ -75,8 +75,8 @@ def init():
     
 # Vlad 11.06.2020
     try:
-      COMport = serial.Serial("/dev/ttyS0", serial_speed, timeout=None)
-      print('CompPort ttyS0')
+      COMport = serial.Serial(serial_port, serial_speed, timeout=None)
+      print(serial_port)
     except:
       COMport = serial.Serial("/dev/ttyUSB1", serial_speed, timeout=None)
       print('ComPort ttyUSB1')
