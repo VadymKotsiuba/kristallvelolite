@@ -172,7 +172,7 @@ def readData():
                     isFirstTemp = False
                 if dT <= 3:
                     temperature = dataSerial[1]
-                temperature *= sign #13:54 16.11.2020 Vadym Kotsiuba
+                    temperature *= sign #13:54 16.11.2020 Vadym Kotsiuba
 #    except:
 #    print('ComPort error')
 #     COMport.close()
