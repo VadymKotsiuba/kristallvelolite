@@ -31,7 +31,7 @@ def setTime():
 def resetCounter():
     dataFile = open("/home/pi/kristallvelolite/count.txt", "w")
     dataFile.write(str(0) + " " + str(0) + "\n")
-    dataFile.write(str(0) + " " + str(0)
+    dataFile.write(str(0) + " " + str(0))
     dataFile.close()
     print("The counter file has been reset.")
 
