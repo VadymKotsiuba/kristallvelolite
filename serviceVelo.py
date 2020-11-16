@@ -37,7 +37,7 @@ def resetCounter():
 
 while work:
     print("1-Print RTC data | 2 - Set RTC Data | 3 - Reset Counter File | 4 - Exit")
-    choose = input("Select action: ");
+    choose = int(input("Select action: "));
     if choose == 1:
         print(ds3231.read_str())
     if choose == 2:
